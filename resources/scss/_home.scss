@@ -1,0 +1,27 @@
+#nav-home {
+    @apply mt-5 flex justify-between border-b border-red-500;
+
+    a {
+        @apply font-semibold mr-3 hover:text-red-400 transition-all duration-500;
+    }
+}
+
+#home {
+    @apply p-2 border-x border-gray-200 h-full; 
+
+    h3 {
+        @apply font-bold text-lg;
+    }
+
+    #canvas {
+        @apply md:grid grid-cols-3 h-full;
+
+        #canva {
+            @apply border border-red-300 p-2 mx-2 rounded-xl mb-2;
+
+            span {
+                @apply text-red-400;
+            }
+        }
+    }
+}

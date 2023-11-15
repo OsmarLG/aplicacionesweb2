@@ -1,0 +1,29 @@
+#encuestas {
+    @apply relative overflow-x-auto shadow-md sm:rounded-lg md:mx-[50px] my-[25px];
+
+    table {
+        @apply w-full text-sm text-left text-gray-700 dark:text-gray-400;
+
+        thead {
+            @apply text-xs text-gray-700 uppercase;
+        }
+
+        tbody {
+            // Puedes agregar estilos específicos para tbody si es necesario
+        }
+
+        #cabeza {
+            @apply bg-gray-500 text-white border-b hover:bg-gray-700 hover:text-white transition-all duration-300;
+        }
+
+        th, td {
+            @apply px-6 py-4 font-medium  whitespace-nowrap;
+
+            // Puedes ajustar estilos adicionales para th y td si es necesario
+        }
+
+        #row {
+            @apply hover:bg-red-400 px-6 py-4 font-medium hover:text-gray-800 whitespace-nowrap text-gray-800  transition-all duration-300;
+        }
+    }
+}

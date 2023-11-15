@@ -1,0 +1,19 @@
+#mi_home {
+    @apply p-2 border-x border-gray-200 h-full; 
+
+    h3 {
+        @apply font-bold text-lg;
+    }
+
+    #mis_canvas {
+        @apply md:grid grid-cols-3 h-full;
+
+        #canva {
+            @apply border border-red-300 p-2 mx-2 rounded-xl mb-2;
+
+            span {
+                @apply text-red-400;
+            }
+        }
+    }
+}

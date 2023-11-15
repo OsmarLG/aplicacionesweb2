@@ -1,0 +1,27 @@
+#canvas {
+    @apply w-[80%] m-auto mt-4;
+    
+    #lienzo {
+        @apply w-full m-auto border border-red-400;
+    }
+
+    #controls {
+        @apply mt-2 p-2;
+
+        input, label {
+            @apply font-thin ;
+        }
+
+        label {
+            @apply ml-2;
+        }
+
+        #cargarImagen {
+            @apply text-[10px] md:text-base;
+        }
+    }
+
+    button {
+        @apply mt-4 bg-red-300 border border-red-600 rounded-lg p-2 font-semibold;
+    }
+}

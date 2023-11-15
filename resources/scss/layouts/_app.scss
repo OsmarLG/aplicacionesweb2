@@ -1,0 +1,100 @@
+body {
+    //backgraound
+    @apply bg-gray-50 font-serif;
+    //fonts
+    @apply font-normal font-sans;
+    // pagina
+    @apply flex flex-col min-h-[100vh];
+}
+
+header {
+    //header
+    @apply w-full shadow-md shadow-red-200 p-2 bg-gray-200;
+
+    #header {
+        @apply flex justify-between;
+        
+        #titulo {
+            @apply w-1/2;
+            //titulo
+            h1 {
+                @apply text-sm font-bold md:font-bold md:text-2xl p-3 tracking-widest text-red-700;
+            }
+        }    
+    
+        #nav {
+            @apply w-1/2 text-right flex justify-end items-center;
+            
+            nav {
+                @apply mx-5;
+
+                ul {
+                    @apply p-1 border border-white rounded-2xl;
+
+                    li {
+                        @apply flex justify-evenly mx-1;
+    
+                        span {
+                            @apply font-bold text-red-500 mx-3;
+                        }
+
+                        svg {
+                            @apply cursor-pointer;
+                            
+                        }
+
+                        a, button {
+                            @apply hidden font-semibold absolute text-xs hover:bg-red-300 hover:text-white rounded-xl p-1 right-9 mt-2 transition-all duration-500;
+                        }
+
+                        button {
+                            @apply mt-7;
+                        }
+                    }
+
+                    &:hover {
+                        a,
+                        button {
+                            @apply block;
+                            @apply hover:bg-red-300 hover:text-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+main {
+    //container
+    @apply w-[95%] m-auto mt-5 p-2 ; 
+
+    //titulo de pagina
+    h2 {
+        @apply text-xl md:text-2xl mb-4 relative;
+
+        #yiel_titulo {
+            @apply flex;
+
+            svg {
+                @apply mr-2 h-full sm:w-[4%] md:w-[2.25%];
+            }
+        }
+
+        //linea decorativa 
+        span {
+            @apply absolute bottom-0 left-0 w-[60%] md:w-1/6 h-[2px] bg-red-300;
+        }
+    }
+}
+
+footer {
+    //footer
+    @apply w-full mt-5 bg-gray-300 p-2 self-end flex items-center justify-center;
+    
+    //span derechos
+    span {
+        @apply p-2 text-center font-semibold md:font-semibold md:text-base;
+    }
+}

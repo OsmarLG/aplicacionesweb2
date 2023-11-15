@@ -1,0 +1,52 @@
+//LOGIN
+#login {
+    @apply md:w-[50%] bg-white m-auto border border-gray-200 rounded-md shadow-md shadow-red-200 mt-10;
+
+    //imagen login
+    #img_login {
+        @apply w-[20%] md:w-[10%] m-auto my-8;
+
+        svg {
+            @apply w-full h-full;
+        }
+    }
+
+    //formulario
+    form {
+        @apply w-[90%] m-auto;
+
+        div {
+            @apply w-full m-auto mb-3 md:mb-8 md:w-[60%];
+
+            label {
+                @apply md:text-lg md:w-[50%];
+            }
+
+            p {
+                @apply text-red-600 text-xs;
+            }
+
+            input[type="text"], input[type="password"] {
+                @apply w-full rounded-md border border-red-100 p-1 mt-1;
+
+                @apply md:block m-auto;
+            }
+            
+            input[type="checkbox"]{
+                @apply w-4 h-4 align-middle;
+            }
+
+            #mantener {
+                @apply text-xs;
+            }
+
+            div {
+                input[type="submit"]{
+                    @apply w-full mt-2  md:mt-3 bg-red-500 border border-red-900 rounded-md p-1 text-white font-bold hover:bg-red-200 
+                    hover:text-red-800 transition-all duration-500;
+
+                }
+            }
+        }
+    }
+}

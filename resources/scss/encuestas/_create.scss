@@ -1,0 +1,51 @@
+#encuesta {
+    @apply w-[90%] m-auto;
+
+    div {
+        @apply sm:w-full md:w-[50%] m-auto p-3 border border-gray-200 mb-4 rounded-lg shadow-lg shadow-red-200 text-center;
+
+        label {
+            @apply font-semibold text-2xl;
+        }
+
+        span {
+            @apply font-medium text-xs text-red-800;
+        }
+
+        textarea, select, input {
+            @apply p-1 mb-2 mt-7 border border-red-900 rounded-md w-full;
+        }
+
+        button {
+            @apply p-2 text-center mt-2 font-semibold hover:bg-green-600 hover:text-white m-auto bg-green-300 border border-green-600 rounded-lg;
+        }
+    }
+
+    #centrar {
+        @apply flex mt-7 border-none shadow-none;
+
+        button {
+            @apply p-2 text-center font-semibold hover:bg-gray-600 hover:text-white m-auto bg-gray-300 border border-gray-600 rounded-lg;
+        }
+    }
+
+    .pregunta {
+        @apply hidden;
+    }
+
+    .pregunta.visible {
+        @apply block;
+        animation: slide-in 0.5s ease-in-out;
+    }
+
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
