@@ -18,7 +18,7 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            'name' => 'Administrador',
             // 'email' => fake()->unique()->safeEmail(),
             // 'email_verified_at' => now(),
             'username' => 'admin',
@@ -32,7 +32,7 @@ class UserFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'name' => fake()->name(),
+                'name' => 'Survey',
                 // 'email' => fake()->unique()->safeEmail(),
                 // 'email_verified_at' => now(),
                 'username' => 'survey',
@@ -42,21 +42,64 @@ class UserFactory extends Factory
             ];
         });
     }
-
-    public function surveys()
+    public function larzzz()
     {
         return $this->state(function (array $attributes) {
             return [
-                'name' => fake()->name(),
+                'name' => 'Luis Alejandro Roddriguez Zavalza',
                 // 'email' => fake()->unique()->safeEmail(),
                 // 'email_verified_at' => now(),
-                'username' => fake()->userName(),
+                'username' => 'larzzz17',
                 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
                 'rol' => 'SURVEY',
                 // 'remember_token' => Str::random(10),
             ];
         });
     }
+    public function osmarlg()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'name' => 'Osmar Alejandro Liera Gómez',
+                // 'email' => fake()->unique()->safeEmail(),
+                // 'email_verified_at' => now(),
+                'username' => 'osmarlg',
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                'rol' => 'SURVEY',
+                // 'remember_token' => Str::random(10),
+            ];
+        });
+    }
+    public function fantasticjaac()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'name' => 'José Antonio Aguila Cuevas',
+                // 'email' => fake()->unique()->safeEmail(),
+                // 'email_verified_at' => now(),
+                'username' => 'fantasticjaac',
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                'rol' => 'SURVEY',
+                // 'remember_token' => Str::random(10),
+            ];
+        });
+    }
+    public function sprinfil()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'name' => 'Jeremy Ivan Ojeda Ceseña',
+                // 'email' => fake()->unique()->safeEmail(),
+                // 'email_verified_at' => now(),
+                'username' => 'sprinfil',
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                'rol' => 'SURVEY',
+                // 'remember_token' => Str::random(10),
+            ];
+        });
+    }
+
+
 
     /**
      * Indicate that the model's email address should be unverified.

@@ -14,6 +14,9 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory()->create();
         \App\Models\User::factory()->survey()->create();
-        \App\Models\User::factory(10)->surveys()->create();
+        \App\Models\User::factory()->osmarlg()->create();
+        \App\Models\User::factory()->larzzz()->create();
+        \App\Models\User::factory()->fantasticjaac()->create();
+        \App\Models\User::factory()->sprinfil()->create();
     }
 }
