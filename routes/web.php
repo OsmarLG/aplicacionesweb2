@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\CanvaController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SvgController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CanvaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\EncuestaController;
@@ -32,14 +33,6 @@ Route::middleware(['auth'])->group(function (){
         Route::get('/','index')->name('home');
     });
 
-    //Canvas
-    Route::controller(CanvaController::class)->group(function (){
-        Route::get('/index', 'index')->name('canva.index')->middleware('survey');
-        Route::get('/create', 'create')->name('canva.create')->middleware('survey');
-        Route::post('/store', 'store')->name('canva.store')->middleware('survey');
-        Route::get('/download/{id}', 'download')->name('canva.download');
-    })->prefix('canva');
-
     //Encuestas
     Route::controller(EncuestaController::class)->group(function (){
         //ADMIN
@@ -52,6 +45,22 @@ Route::middleware(['auth'])->group(function (){
             Route::post('/encuestas/create', 'store')->name('encuestas.store');
         });
     });
+
+        //Canvas
+        Route::group(['prefix' => 'canvas'], function(){
+            Route::controller(CanvaController::class)->group(function (){
+                Route::get('/index', 'index')->name('canva.index')->middleware('survey');
+                Route::get('/create', 'create')->name('canva.create')->middleware('survey');
+                Route::post('/store', 'store')->name('canva.store')->middleware('survey');
+                Route::get('/download/{id}', 'download')->name('canva.download');
+            });
+        });
+
+        Route::group(['prefix' => 'svgs'], function(){
+            Route::controller(SvgController::class)->group(function (){
+                Route::get('/index', 'index')->name('svg.index')->middleware('survey');
+            });
+        });
 
     //LOGOUT
     Route::post('/logout', [LogoutController::class, 'store'])->name('logout');

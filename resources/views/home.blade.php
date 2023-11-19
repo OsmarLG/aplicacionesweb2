@@ -18,6 +18,7 @@
                 @survey
                 <a href="{{ route('canva.create') }}">Crear Canva</a>
                 <a href="{{ route('canva.index') }}">Mis Canvas</a>
+                <a href="{{ route('svg.index') }}">SVG</a>
                 @endsurvey
             </div>
             <div>
